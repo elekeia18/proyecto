@@ -1,11 +1,10 @@
 // Configuración base
-const BASE_URL = "http://localhost:4000";
+const BASE_URL = "https://parkinguts.onrender.com";
 const API_ENDPOINTS = {
   clientes: `${BASE_URL}/clientes`,
-  vehiculos: `${BASE_URL}/vehiculos`,
-  plazas: `${BASE_URL}/plazas`,
-  pisos: `${BASE_URL}/pisos`  // agregado
+  // Agrega otros endpoints si los tienes
 };
+
 
 // Utilidad para manejar peticiones
 async function handleRequest(url, method = 'GET', data = null) {
