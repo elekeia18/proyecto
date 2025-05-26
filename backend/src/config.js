@@ -1,4 +1,4 @@
-import { config } from "dotenv";
+/*import { config } from "dotenv";
 
 config();
 
@@ -9,3 +9,4 @@ export default {
     password: process.env.PASSWORD,
 
 }
+*/

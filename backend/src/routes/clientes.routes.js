@@ -1,10 +1,19 @@
-import { Router } from "express";
-import { methodHTTP3 as clienteController } from "../controllers/clientes.controllers.js"
 
-const router = Router();
+import express from "express";
+import {
+  obtenerClientes,
+  obtenerClientePorId,
+  crearCliente,
+  actualizarCliente,
+  eliminarCliente,
+} from "../controllers/clientes.controllers.js";
 
-//Parcial Endpoints 
-router.post("/", clienteController.postClientes); //crud create
+const router = express.Router();
 
+router.get("/all", obtenerClientes);
+router.get("/:id", obtenerClientePorId);
+router.post("/", crearCliente);
+router.put("/actualizar/:id", actualizarCliente);
+router.delete("/eliminar/:id", eliminarCliente);
 
 export default router;

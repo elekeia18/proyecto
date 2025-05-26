@@ -1,9 +1,17 @@
-import { Router } from "express";
-import { methodHTTP2 as empleadoController } from "../controllers/empleadocontrollers.js"
 
-const router = Router();
+import express from "express";
+import {
+  obtenerEmpleados,
+  crearEmpleado,
+  actualizarEmpleado,
+  eliminarEmpleado,
+} from "../controllers/empleados.controllers.js";
 
-//Parcial Endpoints 
-router.get("/", empleadoController.getEmpleados); //crud read
+const router = express.Router();
+
+router.get("/all", obtenerEmpleados);
+router.post("/", crearEmpleado);
+router.put("/actualizar/:id", actualizarEmpleado);
+router.delete("/eliminar/:id", eliminarEmpleado);
 
 export default router;
